@@ -38,17 +38,3 @@ git push
 Then manually trigger the Release workflow in GitHub Actions.
 
 Published packages include [Provenance](https://docs.npmjs.com/generating-provenance-statements) attestation linking the package to its CI build.
-
----
-
-## One-time Setup
-
-1. **npmjs.com** — Go to the package page → Settings → Trusted Publisher, add a GitHub Actions entry:
-   - Owner: `module-federation`
-   - Repository: `mcp-apps-server`
-   - Workflow: `release.yml`
-   - Environment: `npm`
-
-2. **GitHub** — Create an environment named `npm` under repository Settings → Environments.
-
-3. **GitHub App** — Install [pkg-pr-new](https://github.com/apps/pkg-pr-new) to enable preview publishing.
