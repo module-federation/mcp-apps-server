@@ -1,0 +1,45 @@
+{
+  "name": "@module-federation/mcp-apps-server",
+  "version": "0.0.0",
+  "description": "MCP Apps Server for Module Federation",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "echo \"No build step configured yet\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "pnpm run build",
+    "changeset": "changeset",
+    "version:bump": "changeset version",
+    "release": "changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/module-federation/mcp-apps-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/module-federation/mcp-apps-server/issues"
+  },
+  "homepage": "https://github.com/module-federation/mcp-apps-server#readme",
+  "author": "Module Federation Team",
+  "packageManager": "pnpm@10.6.5",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
